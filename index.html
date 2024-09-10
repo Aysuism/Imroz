@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Assets/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body class="light">
+
+    <!--------------------------Header starts----------->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    
+                <button class="dark-or-light-mode">Darkmode</button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blocks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="buy-now"><span>BUY NOW</span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="container-fluid p-0">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://imroz.ibthemespro.com/img/bg-image-33.dfff0964.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://imroz.ibthemespro.com/img/bg-image-18.4f3bafe7.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://imroz.ibthemespro.com/img/bg-image-19.50bb7235.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="inner-text">
+                        <h1>Grow business.</h1>
+                        <p> There are many variations of passages of Lorem Ipsum available
+                            but the majority have suffered alteration. </p>
+                        <button>CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!--------------------------Header ends----------->
+
+
+    <!--------------------------Main starts----------->
+    <main>
+        <section class="logos">
+            <div class="container-fluid">
+                <ul type="none">
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-01.d97354a2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-02.09246bbd.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-03.3c22f8c5.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-04.359b43aa.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-05.cc494e3f.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-06.b5cdc851.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-02.09246bbd.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-03.3c22f8c5.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://imroz.ibthemespro.com/img/brand-04.359b43aa.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section class="services-provide-for-you">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="caption">
+                            <span>What we can do for you</span>
+                            <h2>Services provide for you</h2>
+                            <p>There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 px-3">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cast" style="color: #fd4766;">
+                                <path
+                                    d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6">
+                                </path>
+                                <line x1="2" y1="20" x2="2.01" y2="20"></line>
+                            </svg>
+                            <h3>Business Strategy</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-layers" style="color: #337dff;">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            <h3>Website Development</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 px-3">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-users" style="color: #12d8df;">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3>Marketing & Reporting</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12px-3">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-monitor" style="color: #59c98d;">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3>Mobile Development</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-users" style="color: #6f41f6;">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3>Marketing & Reporting</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12px-3">
+                        <div class="box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-monitor" style="color: #357ff6;">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3>Mobile Development</h3>
+                            <p>I throw myself down among the tall grass by the stream as I lie close to the earth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="working-process">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <img src="https://imroz.ibthemespro.com/img/about-4.b562d8fe.png" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="content">
+                            <span class="title">Our working process</span>
+                            <h2>Working Process</h2>
+                            <button class="improving"><span>Your Business Skills But Never Stop Improving</span></button>
+                            <button class="tactics"><span>Tactics That Can Help Your Business Grow</span></button>
+                            <p>Anim particular cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, none cupidatat.</p>
+                            <button class="improving"><span>The Secret of Succesful Business.</span></button>
+                            <button class="improving"><span>How to Start A Business With Business.</span></button>
+                            <button class="red-button"><span>SEE HOW IT WORKS</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--------------------------Main ends----------->
+
+
+    <script src="Assets/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/script.js"></script>
+</body>
+
+</html>
